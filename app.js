@@ -4,7 +4,7 @@ const app = express();
 app.get('/:name', (req, res) => {
   let name = req.params.name;
   let msg = "";
-  msg = `<h1>Hola ${name}!</h1>`;
+  msg = `<h1>Hola ${name.charAt(0).toUpperCase() + name.slice(1)}!</h1>`;
   res.send(msg);
 });
 
